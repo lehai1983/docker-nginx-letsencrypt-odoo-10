@@ -39,7 +39,7 @@ services:
 
   web:
     restart: always
-    image: odoo:10
+    image: odoo:10.0
     container_name: odoo
     depends_on:
       - db
@@ -50,11 +50,11 @@ services:
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons
     environment:
-      - VIRTUAL_HOST=greenpharma.info
+      - VIRTUAL_HOST=dichvudoanhnghiep.online
       - VIRTUAL_NETWORK=nginx-proxy
       - VIRTUAL_PORT=8069
-      - LETSENCRYPT_HOST=greenpharma.info
-      - LETSENCRYPT_EMAIL=test@greenpharma.info
+      - LETSENCRYPT_HOST=dichvudoanhnghiep.online
+      - LETSENCRYPT_EMAIL=ketoan@haname.vn
   db:
     restart: always
     image: postgres:9.6
